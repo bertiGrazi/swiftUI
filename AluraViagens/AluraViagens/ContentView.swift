@@ -13,7 +13,7 @@ struct ContentView: View {
         GeometryReader { view in
             // MARK: - VStack Principal
             VStack {
-                // MARK: - VStack Header
+            // MARK: - VStack Header
                 VStack {
                     Text("alura viagens")
                         .foregroundColor(Color.white)
@@ -32,16 +32,48 @@ struct ContentView: View {
                 }
                 .frame(width: view.size.width, height: 180, alignment: .top)
                 .background(Color.purple)
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 
-                List {
-                    Text("Rio de Janeiro")
-                    Text("Ceará")
-                    Text("Atibaia")
-                    Text("Rio de Janeiro")
+                HStack {
+                    Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                        Text("Hotéis")
+                            .font(.custom("Avenir Medium", size: 17))
+                            .foregroundColor(Color.white)
+                    }
+                    .frame(width: 100, height: 50)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 10))
+                    .background(Color.blue)
+                    .offset(x: 50)
+                
+                    Spacer()
+                    
+                    Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                        Text("Pacotes")
+                            .font(.custom("Avenir Medium", size: 17))
+                            .foregroundColor(Color.white)
+                    }
+                    .frame(width: 100, height: 50)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange, lineWidth: 10))
+                    .background(Color.orange)
+                    .offset(x: -50)
+                }
+                .offset(y: -25)
+                
+                List(viagens) { viagem in
+                    VStack(alignment: .leading) {
+                        Text(viagem.titulo)
+                        Image(viagem.imagem)
+                            .resizable() //ocupa somente o espaço disponivel
+                            .frame(height: 125)
+                        HStack {
+                            Text(viagem.quantidadeDeDias)
+                            Spacer()
+                            Text(viagem.valor)
+                        }
+                    }
                 }
             }
         }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
