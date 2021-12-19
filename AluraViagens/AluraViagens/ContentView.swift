@@ -13,7 +13,7 @@ struct ContentView: View {
         GeometryReader { view in
             // MARK: - VStack Principal
             VStack {
-                // MARK: - VStack Header
+            // MARK: - VStack Header
                 VStack {
                     Text("alura viagens")
                         .foregroundColor(Color.white)
@@ -58,15 +58,22 @@ struct ContentView: View {
                 }
                 .offset(y: -25)
                 
-                List {
-                    Text("Rio de Janeiro")
-                    Text("Ceará")
-                    Text("Atibaia")
-                    Text("Rio de Janeiro")
+                List(viagens) { viagem in
+                    VStack(alignment: .leading) {
+                        Text(viagem.titulo)
+                        Image(viagem.imagem)
+                            .resizable() //ocupa somente o espaço disponivel
+                            .frame(height: 125)
+                        HStack {
+                            Text(viagem.quantidadeDeDias)
+                            Spacer()
+                            Text(viagem.valor)
+                        }
+                    }
                 }
             }
         }
-        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
