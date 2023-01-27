@@ -13,17 +13,20 @@ struct HomeView: View {
     
     //MARK: - Body
     var body: some View {
-        VStack {
-            Text("Home")
-                .font(.largeTitle)
-            
-            Button(action: {
-                isOnboardinViewActive = true
-            }) {
-                Text("Restart")
-            }
-        }
-    } //: VSTACK
+        ZStack {
+            Color("ColorBlue")
+            VStack(spacing: 20) {
+                Text("Home")
+                    .font(.largeTitle)
+                
+                Button(action: {
+                    isOnboardinViewActive = true
+                }) {
+                    Text("Restart")
+                }
+            } //: VStack
+        } //: ZStack
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {
