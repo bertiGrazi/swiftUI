@@ -13,10 +13,14 @@ struct OnboardingView: View {
     @AppStorage("onboarding") var isOnboardinViewActive: Bool = true
     
     @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
-        //offset = deslocamento
+    //offset = deslocamento
     @State private var buttonOffset: CGFloat = 0
     // a property to control the animating
     @State private var isAnimating: Bool = false
+    // .zero = CGSize(width: 0, height: 0)
+    @State private var imageOffSet: CGSize = .zero
+    @State private var indicatorOpacity: Double = 1.0
+    @State private var textTitle: String = "Share."
     
     var body: some View {
         ZStack {
@@ -29,20 +33,23 @@ struct OnboardingView: View {
                 Spacer()
                 
                 VStack(spacing: 0) {
-                    Text("Share.")
+                    Text(textTitle)
                         .font(.system(size: 60))
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
+                        .transition(.opacity)
+                    // We use the ID method to tell SwiftUI that a view is NO LONGER the same view
+                        .id(textTitle)
                     
                     Text("""
                     It1s not how much we give but
                     how much love we put into giving.
                     """)
-                    .font(.title3)
-                    .fontWeight(.light)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 10)
+                        .font(.title3)
+                        .fontWeight(.light)
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 10)
                 } //: Header
                 .opacity(isAnimating ? 1 : 0)
                 .offset(y: isAnimating ? 0 : -40)
@@ -52,12 +59,53 @@ struct OnboardingView: View {
                 
                 ZStack {
                     CircleGroupView(ShapeColor: .white, ShapeOpacity: 0.2)
+                                                    //opposite direction
+                        .offset(x: imageOffSet.width * -1)
+                        .blur(radius: abs(imageOffSet.width / 5))
+                        .animation(.easeOut(duration: 1), value: imageOffSet)
+                    
                     Image("character-1")
                         .resizable()
                         .scaledToFit()
                         .opacity(isAnimating ? 1 : 0)
                         .animation(.easeOut(duration: 1), value: isAnimating)
+                        .offset(x: imageOffSet.width * 1.2, y: 0)
+                        .rotationEffect(.degrees(Double(imageOffSet.width / 20)))
+                        .gesture(
+                            DragGesture()
+                                .onChanged { gesture in
+                                    /// abs = Returning Absolute Values
+                                    if abs(imageOffSet.width) <= 150 {
+                                        imageOffSet = gesture.translation
+                                        
+                                        withAnimation(.linear(duration: 0.25)) {
+                                            indicatorOpacity = 0
+                                            textTitle = "Give."
+                                        }
+                                    }
+                                }
+                                .onEnded { _ in
+                                    imageOffSet = .zero
+                                    
+                                    withAnimation(.linear(duration: 0.25)) {
+                                        indicatorOpacity = 1
+                                        textTitle = "Share."
+                                    }
+                                }
+                                
+                        ) //: Gesture
+                        .animation(.easeOut(duration: 1), value: imageOffSet)
                 } //: Center
+                .overlay(
+                    Image(systemName: "arrow.left.and.right.circle")
+                        .font(.system(size: 44, weight: .ultraLight))
+                        .foregroundColor(.white)
+                        .offset(y: 20)
+                        .opacity(isAnimating ? 1 : 0)
+                        .animation(.easeOut(duration: 1).delay(2), value: isAnimating)
+                        .opacity(indicatorOpacity)
+                    , alignment: .bottom
+                )
                 
                 Spacer()
                 
