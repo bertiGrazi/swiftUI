@@ -30,5 +30,6 @@ struct CoverImageView_Previews: PreviewProvider {
     static var previews: some View {
         CoverImageView()
             .previewLayout(.fixed(width: 400, height: 300))
+            .cornerRadius(54)
     }
 }
