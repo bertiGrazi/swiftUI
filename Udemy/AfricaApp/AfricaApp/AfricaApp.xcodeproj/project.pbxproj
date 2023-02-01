@@ -33,6 +33,7 @@
 		B187F472298A90BD00F963DB /* CoverImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187F471298A90BD00F963DB /* CoverImageModel.swift */; };
 		B187F475298A917500F963DB /* CodableBundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187F474298A917500F963DB /* CodableBundleExtensions.swift */; };
 		B187F477298A965900F963DB /* AnimalListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187F476298A965900F963DB /* AnimalListItemView.swift */; };
+		B187F479298A9A4B00F963DB /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187F478298A9A4B00F963DB /* AnimalModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		B187F471298A90BD00F963DB /* CoverImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageModel.swift; sourceTree = "<group>"; };
 		B187F474298A917500F963DB /* CodableBundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtensions.swift; sourceTree = "<group>"; };
 		B187F476298A965900F963DB /* AnimalListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListItemView.swift; sourceTree = "<group>"; };
+		B187F478298A9A4B00F963DB /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				B187F471298A90BD00F963DB /* CoverImageModel.swift */,
+				B187F478298A9A4B00F963DB /* AnimalModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				B187F44F298A875D00F963DB /* MainView.swift in Sources */,
 				B187F46F298A8EDF00F963DB /* CoverImageView.swift in Sources */,
 				B187F472298A90BD00F963DB /* CoverImageModel.swift in Sources */,
+				B187F479298A9A4B00F963DB /* AnimalModel.swift in Sources */,
 				B187F475298A917500F963DB /* CodableBundleExtensions.swift in Sources */,
 				B187F44B298A873D00F963DB /* MapView.swift in Sources */,
 				B187F437298A866100F963DB /* AfricaAppApp.swift in Sources */,
