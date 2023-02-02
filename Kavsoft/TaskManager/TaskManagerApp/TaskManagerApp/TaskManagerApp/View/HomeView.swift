@@ -29,9 +29,46 @@ struct HomeView: View {
                 .padding(.vertical)
                 
                 CustomSegmentedBar()
+                    .padding(.top, 5)
+                
+                //MARK: Task View
+                    //Later Will Come
             } //: VStack
             .padding()
         } //: ScrollView
+        
+        .overlay(alignment: .bottom) {
+            //MARK: - Add Buttom
+            Button {
+                
+            } label: {
+                Label {
+                    Text("Add Task")
+                        .font(.callout)
+                        .fontWeight(.semibold)
+                } icon: {
+                    Image(systemName: "plus.app.fill")
+                }
+                .foregroundColor(.white)
+                .padding(.vertical, 12)
+                .padding(.horizontal)
+                .background(.black, in: Capsule() )
+            }
+            
+            //MARK: Linear Gradient GB
+            .padding(.top, 10)
+            .frame(maxWidth: .infinity)
+            .background {
+                LinearGradient(colors: [
+                    .white.opacity(0.05),
+                    .white.opacity(0.4),
+                    .white.opacity(0.7),
+                    .white
+                ], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            }
+            
+        }
     }
     
     //MARK: - Custom Segmented Bar
@@ -50,7 +87,7 @@ struct HomeView: View {
                     .background {
                         if taskModel.currentTab == tab {
                             Capsule()
-                                .fill(.blue)
+                                .fill(.black)
                                 .matchedGeometryEffect(id: "TAB", in: animation)
                         }
                     }
@@ -62,7 +99,7 @@ struct HomeView: View {
                     }
             }
         }
-    }
+    } //: Custom Segmented Bar
 }
 
 struct HomeView_Previews: PreviewProvider {
