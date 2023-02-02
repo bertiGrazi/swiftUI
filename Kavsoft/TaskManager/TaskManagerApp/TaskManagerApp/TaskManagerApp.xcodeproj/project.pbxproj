@@ -17,6 +17,7 @@
 		B184BE6E298BD13200FEA63C /* TaskManagerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184BE6D298BD13200FEA63C /* TaskManagerAppUITests.swift */; };
 		B184BE70298BD13200FEA63C /* TaskManagerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184BE6F298BD13200FEA63C /* TaskManagerAppUITestsLaunchTests.swift */; };
 		B184BE7F298BD22800FEA63C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184BE7E298BD22800FEA63C /* HomeView.swift */; };
+		B184BE81298BD64300FEA63C /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184BE80298BD64300FEA63C /* TaskViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		B184BE6D298BD13200FEA63C /* TaskManagerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerAppUITests.swift; sourceTree = "<group>"; };
 		B184BE6F298BD13200FEA63C /* TaskManagerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B184BE7E298BD22800FEA63C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B184BE80298BD64300FEA63C /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		B184BE7C298BD21000FEA63C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B184BE80298BD64300FEA63C /* TaskViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B184BE57298BD13200FEA63C /* Persistence.swift in Sources */,
+				B184BE81298BD64300FEA63C /* TaskViewModel.swift in Sources */,
 				B184BE50298BD13100FEA63C /* ContentView.swift in Sources */,
 				B184BE5A298BD13200FEA63C /* TaskManagerApp.xcdatamodeld in Sources */,
 				B184BE7F298BD22800FEA63C /* HomeView.swift in Sources */,
