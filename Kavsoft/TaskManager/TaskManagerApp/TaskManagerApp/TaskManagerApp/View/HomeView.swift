@@ -126,6 +126,22 @@ struct HomeView: View {
                     }
                 }
             }
+            
+            Text(task.title ?? "")
+                .font(.title2.bold())
+                .foregroundColor(.black)
+                .padding(.vertical, 10)
+            
+            HStack(alignment: .bottom, spacing: 0) {
+                VStack(alignment: .leading, spacing: 10) {
+                    Label {
+                        Text((task.deadline ?? Date() ).formatted(date: .long, time: .omitted))
+                    } icon: {
+                        Image(systemName: "calendar")
+                    }
+                    .font(.caption)
+                }
+            }
         }
         .padding()
         .frame(maxWidth: .infinity)
