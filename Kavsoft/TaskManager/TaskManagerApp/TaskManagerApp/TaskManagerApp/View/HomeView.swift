@@ -140,6 +140,25 @@ struct HomeView: View {
                         Image(systemName: "calendar")
                     }
                     .font(.caption)
+                    
+                    Label {
+                        Text((task.deadline ?? Date() ).formatted(date: .omitted, time: .shortened))
+                    } icon: {
+                        Image(systemName: "clock")
+                    }
+                    .font(.caption)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
+                if !task.isCompleted {
+                    Button {
+                        
+                    } label: {
+                        Circle()
+                            .strokeBorder(.black, lineWidth: 1.5)
+                            .frame(width: 25, height: 25, alignment: .trailing)
+                            .contentShape(Circle())
+                    }
                 }
             }
         }
