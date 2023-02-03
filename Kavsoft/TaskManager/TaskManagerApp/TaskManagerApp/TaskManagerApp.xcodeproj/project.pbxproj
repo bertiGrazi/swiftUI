@@ -19,6 +19,7 @@
 		B184BE7F298BD22800FEA63C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184BE7E298BD22800FEA63C /* HomeView.swift */; };
 		B184BE81298BD64300FEA63C /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184BE80298BD64300FEA63C /* TaskViewModel.swift */; };
 		B18D0C1A298D296C007344BF /* AddNewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18D0C19298D296C007344BF /* AddNewTask.swift */; };
+		B18D0C1C298D5CE6007344BF /* DynamicFilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18D0C1B298D5CE6007344BF /* DynamicFilteredView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		B184BE7E298BD22800FEA63C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B184BE80298BD64300FEA63C /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		B18D0C19298D296C007344BF /* AddNewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTask.swift; sourceTree = "<group>"; };
+		B18D0C1B298D5CE6007344BF /* DynamicFilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteredView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				B184BE7E298BD22800FEA63C /* HomeView.swift */,
 				B18D0C19298D296C007344BF /* AddNewTask.swift */,
+				B18D0C1B298D5CE6007344BF /* DynamicFilteredView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				B184BE57298BD13200FEA63C /* Persistence.swift in Sources */,
 				B184BE81298BD64300FEA63C /* TaskViewModel.swift in Sources */,
 				B184BE50298BD13100FEA63C /* ContentView.swift in Sources */,
+				B18D0C1C298D5CE6007344BF /* DynamicFilteredView.swift in Sources */,
 				B184BE5A298BD13200FEA63C /* TaskManagerApp.xcdatamodeld in Sources */,
 				B18D0C1A298D296C007344BF /* AddNewTask.swift in Sources */,
 				B184BE7F298BD22800FEA63C /* HomeView.swift in Sources */,
