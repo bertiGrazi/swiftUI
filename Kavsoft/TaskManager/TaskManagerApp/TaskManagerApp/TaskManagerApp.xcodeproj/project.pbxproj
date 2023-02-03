@@ -18,6 +18,7 @@
 		B184BE70298BD13200FEA63C /* TaskManagerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184BE6F298BD13200FEA63C /* TaskManagerAppUITestsLaunchTests.swift */; };
 		B184BE7F298BD22800FEA63C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184BE7E298BD22800FEA63C /* HomeView.swift */; };
 		B184BE81298BD64300FEA63C /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184BE80298BD64300FEA63C /* TaskViewModel.swift */; };
+		B18D0C1A298D296C007344BF /* AddNewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18D0C19298D296C007344BF /* AddNewTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		B184BE6F298BD13200FEA63C /* TaskManagerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B184BE7E298BD22800FEA63C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B184BE80298BD64300FEA63C /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		B18D0C19298D296C007344BF /* AddNewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				B184BE7E298BD22800FEA63C /* HomeView.swift */,
+				B18D0C19298D296C007344BF /* AddNewTask.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				B184BE81298BD64300FEA63C /* TaskViewModel.swift in Sources */,
 				B184BE50298BD13100FEA63C /* ContentView.swift in Sources */,
 				B184BE5A298BD13200FEA63C /* TaskManagerApp.xcdatamodeld in Sources */,
+				B18D0C1A298D296C007344BF /* AddNewTask.swift in Sources */,
 				B184BE7F298BD22800FEA63C /* HomeView.swift in Sources */,
 				B184BE4E298BD13100FEA63C /* TaskManagerAppApp.swift in Sources */,
 			);
