@@ -26,6 +26,9 @@ struct HomeView: View {
         animation: .easeInOut
     ) var tasks: FetchedResults<Task>
     
+    //MARK: - Environment Values
+    @Environment(\.self) var env
+    
     //MARK: - BODY
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -119,7 +122,9 @@ struct HomeView: View {
                 //MARK: Edit Button Only for Non Completed Task
                 if !task.isCompleted {
                     Button {
-                        
+                        taskModel.editTask = task
+                        taskModel.openEditTask = true
+                        taskModel.setupTask()
                     } label: {
                         Image(systemName: "square.and.pencil")
                             .foregroundColor(.black)
@@ -152,6 +157,9 @@ struct HomeView: View {
                 
                 if !task.isCompleted {
                     Button {
+                        // MARK: Update with Core Data
+                        task.isCompleted.toggle()
+                        try? env.managedObjectContext.save()
                         
                     } label: {
                         Circle()
