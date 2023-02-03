@@ -12,6 +12,7 @@ struct AddNewTask: View {
     @EnvironmentObject var taskModel: TaskViewModel
     //MARK: - All Environment Values in one Variable
     @Environment(\.self) var env
+    @Namespace var animation
     
     //MARK: - View
     var body: some View {
@@ -119,9 +120,16 @@ struct AddNewTask: View {
                                 if taskModel.taskType == type {
                                     Capsule()
                                         .fill(.black)
+                                        .matchedGeometryEffect(id: "TYPE", in: animation)
                                 } else {
                                     Capsule()
                                         .strokeBorder(.black)
+                                }
+                            }
+                            .contentShape(Capsule())
+                            .onTapGesture {
+                                withAnimation {
+                                    taskModel.taskType = type
                                 }
                             }
                     }
