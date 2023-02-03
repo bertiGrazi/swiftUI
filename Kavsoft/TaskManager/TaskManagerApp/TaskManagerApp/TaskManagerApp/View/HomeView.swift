@@ -26,6 +26,9 @@ struct HomeView: View {
         animation: .easeInOut
     ) var tasks: FetchedResults<Task>
     
+    //MARK: - Environment Values
+    @Environment(\.self) var env
+    
     //MARK: - BODY
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -152,6 +155,9 @@ struct HomeView: View {
                 
                 if !task.isCompleted {
                     Button {
+                        // MARK: Update with Core Data
+                        task.isCompleted.toggle()
+                        try? env.managedObjectContext.save()
                         
                     } label: {
                         Circle()
