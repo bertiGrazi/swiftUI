@@ -14,6 +14,18 @@ struct HomeView: View {
     //MARK: - Matched Geomtry Namespace
     @Namespace var animation
     
+    //MARK: - Fetching Task
+    @FetchRequest(
+        entity: Task.entity(),
+        sortDescriptors:
+            [NSSortDescriptor(
+            keyPath: \Task.deadline,
+            ascending: false)
+            ],
+        predicate: nil,
+        animation: .easeInOut
+    ) var tasks: FetchedResults<Task>
+    
     //MARK: - BODY
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -32,7 +44,7 @@ struct HomeView: View {
                     .padding(.top, 5)
                 
                 //MARK: Task View
-                    //Later Will Come
+                TaskView()
             } //: VStack
             .padding()
         } //: ScrollView
@@ -70,8 +82,91 @@ struct HomeView: View {
             
         }
         .fullScreenCover(isPresented: $taskModel.openEditTask) {
+            taskModel.resetTaskData()
+        } content: {
             AddNewTask()
                 .environmentObject(taskModel)
+        }
+    }
+    
+    //MARK: TaskView
+    @ViewBuilder
+    func TaskView() -> some View {
+        LazyVStack(spacing: 20) {
+            ForEach(tasks) { task in
+                TaskRow(task: task)
+            }
+        }
+        .padding(.top, 20)
+    }
+    
+    //MARK: - Task Row View
+    @ViewBuilder
+    func TaskRow(task: Task) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack {
+                Text(task.type ?? "")
+                    .font(.callout)
+                    .padding(.vertical, 5)
+                    .padding(.horizontal)
+                    .background {
+                        Capsule()
+                            .fill(.white.opacity(0.3))
+                    }
+                
+                Spacer()
+                
+                //MARK: Edit Button Only for Non Completed Task
+                if !task.isCompleted {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "square.and.pencil")
+                            .foregroundColor(.black)
+                    }
+                }
+            }
+            
+            Text(task.title ?? "")
+                .font(.title2.bold())
+                .foregroundColor(.black)
+                .padding(.vertical, 10)
+            
+            HStack(alignment: .bottom, spacing: 0) {
+                VStack(alignment: .leading, spacing: 10) {
+                    Label {
+                        Text((task.deadline ?? Date() ).formatted(date: .long, time: .omitted))
+                    } icon: {
+                        Image(systemName: "calendar")
+                    }
+                    .font(.caption)
+                    
+                    Label {
+                        Text((task.deadline ?? Date() ).formatted(date: .omitted, time: .shortened))
+                    } icon: {
+                        Image(systemName: "clock")
+                    }
+                    .font(.caption)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
+                if !task.isCompleted {
+                    Button {
+                        
+                    } label: {
+                        Circle()
+                            .strokeBorder(.black, lineWidth: 1.5)
+                            .frame(width: 25, height: 25, alignment: .trailing)
+                            .contentShape(Circle())
+                    }
+                }
+            }
+        }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background {
+            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .fill(Color(task.color ?? "Yellow"))
         }
     }
     
