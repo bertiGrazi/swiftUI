@@ -103,7 +103,6 @@ struct AddNewTask: View {
             
             //MARK: Sample Task Types
             let taskTypes: [String] = ["Basic", "Urgent", "Important"]
-            
             VStack(alignment: .leading, spacing: 12) {
                 Text("Task Type")
                     .font(.caption)
@@ -134,10 +133,28 @@ struct AddNewTask: View {
                             }
                     }
                 }
+                .padding(.top, 8)
             }
-            .padding(.top, 8)
+            .padding(.vertical, 10)
+            
+            Divider()
+            
+            //MARK: - Save Button
+            Button {
+                
+            } label: {
+                Text("Save Task")
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+                    .foregroundColor(.white)
+                    .background {
+                        Capsule()
+                            .fill(.black)
+                    }
+            }
         }
-        
         .frame(maxHeight: .infinity, alignment: .top)
         .padding()
     }
