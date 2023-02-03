@@ -44,6 +44,17 @@ struct AddNewTask: View {
                         Circle()
                             .fill(Color(color))
                             .frame(width: 25, height: 25)
+                            .background {
+                                if taskModel.taskColor == color {
+                                    Circle()
+                                        .strokeBorder(.gray)
+                                        .padding(-3)
+                                }
+                            }
+                            .contentShape(Circle())
+                            .onTapGesture {
+                                taskModel.taskColor = color
+                            }
                     }
                 }
                 .padding(.top, 10)
