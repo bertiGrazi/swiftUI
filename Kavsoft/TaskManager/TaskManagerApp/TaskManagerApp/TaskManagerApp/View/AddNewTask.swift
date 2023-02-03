@@ -27,7 +27,7 @@ struct AddNewTask: View {
                             .font(.title3)
                             .foregroundColor(.black)
                     }
-                }
+                } // Button Back
             
             VStack(alignment: .leading, spacing: 12) {
                 Text("Task Color")
@@ -58,16 +58,84 @@ struct AddNewTask: View {
                     }
                 }
                 .padding(.top, 10)
-            }
+            } //Colors
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.top, 30)
+            
+            Divider()
+                .padding(.vertical, 10)
+            
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Task DeadLine")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                
+                Text(taskModel.taskDeadline.formatted(date: .abbreviated, time: .omitted) + ", " + taskModel.taskDeadline.formatted(date: .omitted, time: .shortened))
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .padding(.top, 8)
+            } //TextField
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .overlay(alignment: .bottomTrailing) {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "calendar")
+                        .foregroundColor(.black)
+                }
+            }
+            
+            Divider()
+            
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Task Title")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                
+                TextField("", text: $taskModel.taskTitle)
+                    .frame(maxWidth: .infinity)
+                    .padding(.top, 10)
+            } // Task Title
+            .padding(.top, 10)
+            
+            Divider()
+            
+            //MARK: Sample Task Types
+            let taskTypes: [String] = ["Basic", "Urgent", "Important"]
+            
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Task Type")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                
+                HStack(spacing: 12) {
+                    ForEach(taskTypes, id: \.self) { type in
+                        Text(type)
+                            .font(.callout)
+                            .padding(.vertical, 8)
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(taskModel.taskType == type ? .white : .black)
+                            .background {
+                                if taskModel.taskType == type {
+                                    Capsule()
+                                        .fill(.black)
+                                } else {
+                                    Capsule()
+                                        .strokeBorder(.black)
+                                }
+                            }
+                    }
+                }
+            }
+            .padding(.top, 8)
         }
+        
         .frame(maxHeight: .infinity, alignment: .top)
         .padding()
     }
 }
 
-   
+
 struct AddNewTask_Previews: PreviewProvider {
     static var previews: some View {
         AddNewTask()
