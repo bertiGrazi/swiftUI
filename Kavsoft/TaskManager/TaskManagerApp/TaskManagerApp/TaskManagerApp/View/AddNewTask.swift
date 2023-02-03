@@ -154,6 +154,8 @@ struct AddNewTask: View {
                             .fill(.black)
                     }
             }
+            .frame(maxHeight: .infinity, alignment: .bottom)
+            .padding(.bottom, 10)
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .padding()
