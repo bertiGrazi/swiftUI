@@ -40,7 +40,7 @@ struct HomeView: View {
         .overlay(alignment: .bottom) {
             //MARK: - Add Buttom
             Button {
-                
+                taskModel.openEditTask.toggle()
             } label: {
                 Label {
                     Text("Add Task")
@@ -68,6 +68,10 @@ struct HomeView: View {
                 .ignoresSafeArea()
             }
             
+        }
+        .fullScreenCover(isPresented: $taskModel.openEditTask) {
+            AddNewTask()
+                .environmentObject(taskModel)
         }
     }
     
