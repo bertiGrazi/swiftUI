@@ -70,9 +70,12 @@ struct HomeView: View {
             
         }
         .fullScreenCover(isPresented: $taskModel.openEditTask) {
+            taskModel.resetTaskData()
+        } content: {
             AddNewTask()
                 .environmentObject(taskModel)
         }
+
     }
     
     //MARK: - Custom Segmented Bar
