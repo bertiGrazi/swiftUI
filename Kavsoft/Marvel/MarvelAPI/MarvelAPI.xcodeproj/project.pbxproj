@@ -14,6 +14,8 @@
 		B172B98C29917C2700B5DCDC /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B172B98B29917C2700B5DCDC /* SDWebImageSwiftUI */; };
 		B172B98E29917D4600B5DCDC /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B172B98D29917D4600B5DCDC /* Credentials.swift */; };
 		B172B99329917DB000B5DCDC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B172B99229917DB000B5DCDC /* HomeView.swift */; };
+		B172B99529917E8800B5DCDC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B172B99429917E8800B5DCDC /* HomeViewModel.swift */; };
+		B172B99729917F7900B5DCDC /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B172B99629917F7900B5DCDC /* CharactersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B162BBFB2991775000DAB038 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B172B98D29917D4600B5DCDC /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		B172B99229917DB000B5DCDC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B172B99429917E8800B5DCDC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B172B99629917F7900B5DCDC /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				B172B99229917DB000B5DCDC /* HomeView.swift */,
+				B172B99629917F7900B5DCDC /* CharactersView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 		B172B99129917D9900B5DCDC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B172B99429917E8800B5DCDC /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -177,7 +183,9 @@
 			files = (
 				B172B98E29917D4600B5DCDC /* Credentials.swift in Sources */,
 				B172B99329917DB000B5DCDC /* HomeView.swift in Sources */,
+				B172B99729917F7900B5DCDC /* CharactersView.swift in Sources */,
 				B162BBF72991774F00DAB038 /* ContentView.swift in Sources */,
+				B172B99529917E8800B5DCDC /* HomeViewModel.swift in Sources */,
 				B162BBF52991774F00DAB038 /* MarvelAPIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

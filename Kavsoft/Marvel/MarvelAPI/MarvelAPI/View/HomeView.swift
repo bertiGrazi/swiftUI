@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var homeData = HomeViewModel()
+    
     var body: some View {
         TabView {
             //Character views...
-            Text("Characters")
+            CharactersView()
                 .tabItem {
                     Image(systemName: "person.3.fill")
                     Text("Chracters")
                 }
+            //setting Environment object
+            // so that we can access data on character view...
+                .environmentObject(homeData)
             
             Text("Comics")
                 .tabItem {
