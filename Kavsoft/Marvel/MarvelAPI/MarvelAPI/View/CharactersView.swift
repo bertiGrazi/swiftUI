@@ -30,9 +30,29 @@ struct CharactersView: View {
                 //Shadows
                 .shadow(color: Color.black.opacity(0.06), radius: 5, x: 5, y: 5)
                 .shadow(color: Color.black.opacity(0.06), radius: 5, x: -5, y: -5)
+                
+                if let characters = homeData.fetchedCharacters {
+                    if characters.isEmpty {
+                        // No results...
+                        Text("No Results Found")
+                            .padding(.top, 20)
+                    } else {
+                        ForEach(characters) { data in
+                            Text(data.name)
+                        }
+                    }
+                } else {
+                    if homeData.searchQuery != "" {
+                        //Loading Screen...
+                        ProgressView()
+                            .padding(.top, 20)
+                    }
+                }
             }
             .padding()
             .navigationTitle("Marvel")
+            
+
         }
     }
 }
