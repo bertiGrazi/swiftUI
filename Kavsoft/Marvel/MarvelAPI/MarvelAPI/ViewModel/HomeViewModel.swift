@@ -18,6 +18,11 @@ class HomeViewModel: ObservableObject {
     // fetched Data...
     @Published var fetchedCharacters: [Character]? = nil
     
+    //fetched comics
+    @Published var fetchedComics: [Comic] = []
+    
+    @Published var offset: Int = 0
+    
     init() {
         searchCancellable = $searchQuery
             .removeDuplicates()
@@ -80,5 +85,40 @@ class HomeViewModel: ObservableObject {
             String(format: "%02hhx", $0)
         }
         .joined()
+    }
+    
+    func fetchComics() {
+        let ts = String(Date().timeIntervalSince1970)
+        let hash = MD5(data: "\(ts)\(privateKey)\(keypublic)")
+
+        let url = "https://gateway.marvel.com:443/v1/public/comics?limit=20&offset=\(offset)&ts=\(ts)&apikey=\(keypublic)&hash=\(hash)"
+        
+        let session = URLSession(configuration: .default)
+        
+        session.dataTask(with: URL(string: url)!) { (data, _, err) in
+            if let error = err {
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let APIData = data else {
+               print("no data found")
+                return
+            }
+            
+            do {
+                // decoding API Data
+                let characters = try JSONDecoder().decode(APIComicResult.self, from: APIData)
+                
+                DispatchQueue.main.async {
+                    self.fetchedComics = characters.data.results
+                }
+            }
+            catch {
+                print(error.localizedDescription)
+            }
+        }
+        .resume()
+       
     }
 }
