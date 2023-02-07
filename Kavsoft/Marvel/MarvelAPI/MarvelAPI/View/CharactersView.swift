@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CharactersView: View {
     @EnvironmentObject var homeData: HomeViewModel
@@ -21,7 +22,10 @@ struct CharactersView: View {
                         )
                         .foregroundColor(.gray)
                         
-                        TextField("Search Character", text: $homeData.searchQuery)
+                        TextField("Search Character Names", text: $homeData.searchQuery)
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
+                            
                     }
                 }
                 .padding(.vertical, 10)
@@ -38,7 +42,7 @@ struct CharactersView: View {
                             .padding(.top, 20)
                     } else {
                         ForEach(characters) { data in
-                            Text(data.name)
+                            CharacterRowView(character: data)
                         }
                     }
                 } else {
@@ -60,5 +64,39 @@ struct CharactersView: View {
 struct CharactersView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct CharacterRowView: View {
+    var character: Character
+    
+    var body: some View {
+        HStack(alignment: .top, spacing: 15) {
+            WebImage(url: extractImage(data: character.thumbnail))
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150, height: 150)
+            
+            VStack(alignment: .leading, spacing: 8, content: {
+                Text(character.name)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                
+                Text(character.description)
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                    .lineLimit(4)
+                    .multilineTextAlignment(.leading)
+            }) //: VStack
+            
+            Spacer(minLength: 0)
+        } //: HStack
+    }
+    
+    func extractImage(data: [String: String]) -> URL {
+        let path = data["path"] ?? ""
+        let ext = data["extension"] ?? ""
+        
+        return URL(string: "\(path).\(ext)")!
     }
 }
