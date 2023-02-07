@@ -111,7 +111,7 @@ class HomeViewModel: ObservableObject {
                 let characters = try JSONDecoder().decode(APIComicResult.self, from: APIData)
                 
                 DispatchQueue.main.async {
-                    self.fetchedComics = characters.data.results
+                    self.fetchedComics.append(contentsOf: characters.data.results)
                 }
             }
             catch {
