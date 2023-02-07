@@ -23,10 +23,37 @@ struct ComicsView: View {
                             ComicRowView(character: comic)
                         }
                     }
-                    .padding(.bottom)
-                }  
+                    // Infinty Scroll Using Geometry Reader
+                    if homeData.offset == homeData.fetchedComics.count {
+                        //showing progress and fetching new data...
+                        ProgressView()
+                            .padding(.vertical)
+                            .onAppear(perform: {
+                                homeData.fetchComics()
+                            })
+                    } else {
+                        GeometryReader { reader -> Color in
+                            let minY = reader.frame(in: .global).midY
+                            
+                            let height = UIScreen.main.bounds.height / 1.3
+                            
+                            if !homeData.fetchedComics.isEmpty && minY < height {
+                                print("last")
+                                
+                                DispatchQueue.main.async {
+                                    homeData.offset = homeData.fetchedComics.count
+                                }
+                            }
+                            
+                            
+                            return Color.clear
+                        } //: GeometryReader
+                        .frame(width: 20, height: 20)
+                    }
+                }
                     
             })
+            .navigationTitle("Marvel's Comics")
         }
         .onAppear(perform: {
             if homeData.fetchedComics.isEmpty {
