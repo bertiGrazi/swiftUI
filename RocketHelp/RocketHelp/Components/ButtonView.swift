@@ -9,12 +9,11 @@ import SwiftUI
 
 struct ButtonView: View {
     var textButton: String = ""
+    var actionButton: () -> Void
     
     var body: some View {
         HStack {
-            Button {
-                
-            } label: {
+            Button(action: actionButton) {
                 Text(textButton)
                     .bold()
                     .foregroundColor(.white)
@@ -29,6 +28,6 @@ struct ButtonView: View {
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(textButton: "Entrar")
+        ButtonView(textButton: "Entrar", actionButton: {})
     }
 }

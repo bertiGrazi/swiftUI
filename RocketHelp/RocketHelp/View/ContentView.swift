@@ -36,7 +36,9 @@ struct ContentView: View {
                             TextFieldView(textField: TextField("Senha", text: $password), imageName: "key.fill", height: 56.0, typeKeyborad: .numberPad)
                         }
                         .padding(10)
-                        ButtonView(textButton: "Entrar")
+                        ButtonView(textButton: "Entrar", actionButton: {
+                            print("Oi")
+                        })
                     }
                 }
                 
