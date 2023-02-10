@@ -25,7 +25,11 @@ struct ContentView: View {
             }
             .navigationTitle(Text("Shopping App"))
             .toolbar {
-                CardButton(numberOfProducts: 4)
+                NavigationLink {
+                    CartView()
+                } label: {
+                    CardButton(numberOfProducts: 0)
+                }
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
