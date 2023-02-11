@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextFieldView: View {
+struct RHTextFieldView: View {
     var textField: TextField<Text>
     var imageName: String
     var height: CGFloat

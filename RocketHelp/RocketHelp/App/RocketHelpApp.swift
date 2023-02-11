@@ -7,11 +7,12 @@
 
 import SwiftUI
 
+
 @main
 struct RocketHelpApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RHLoginView()
         }
     }
 }

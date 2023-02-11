@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct ButtonView: View {
+public struct ButtonView: View {
     var textButton: String = ""
     var actionButton: () -> Void
     
-    var body: some View {
+    public var body: some View {
         HStack {
             Button(action: actionButton) {
                 Text(textButton)
