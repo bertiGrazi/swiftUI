@@ -7,19 +7,26 @@
 
 import SwiftUI
 
-//do = fazer
-//catch = pegar
+//do-catch = fazer-pegar
 // try = tentar
 //throws = lances
 
 class  DoCatchTryThrowsBootcampManager {
-    var isActive: Bool = true
+    var isActive: Bool = false
     
     func getTitle() -> (title: String?, error: Error?) {
         if isActive {
             return ("Grazielli Lima Berti", nil)
         } else {
             return (nil, URLError(.badURL))
+        }
+    }
+    
+    func getTitleTwo() -> Result<String, Error> {
+        if isActive {
+            return .success("Grazielli Lima Berti")
+        } else {
+            return .failure(URLError(.cancelled))
         }
     }
 }
@@ -29,10 +36,21 @@ class DoCatchTryThrowsBootcampViewModel: ObservableObject {
     let manager = DoCatchTryThrowsBootcampManager()
     
     func fetchTitle() {
+        /*
         let resultRequest = manager.getTitle()
         if let newTitle = resultRequest.title {
             self.text = newTitle
         } else if let error = resultRequest.error {
+            self.text = error.localizedDescription
+        }*/
+        
+        let result = manager.getTitleTwo()
+        
+        switch result {
+        case .success(let newTitle):
+            self.text = newTitle
+            
+        case .failure(let error):
             self.text = error.localizedDescription
         }
     }
