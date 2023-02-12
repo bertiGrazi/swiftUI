@@ -12,7 +12,7 @@ import SwiftUI
 //throws = lances
 
 class  DoCatchTryThrowsBootcampManager {
-    var isActive: Bool = false
+    var isActive: Bool = true
     
     func getTitle() -> (title: String?, error: Error?) {
         if isActive {
@@ -31,8 +31,16 @@ class  DoCatchTryThrowsBootcampManager {
     }
     
     func getTitle3() throws -> String {
+//        if isActive {
+//            return "Grazielli Lima Berti"
+//        } else {
+            throw URLError(.networkConnectionLost)
+//        }
+    }
+    
+    func getTitle4() throws -> String {
         if isActive {
-            return "Grazielli Lima Berti"
+            return "My name is Grazielli Lima Berti!\nOk, you figure my name!"
         } else {
             throw URLError(.networkConnectionLost)
         }
@@ -40,7 +48,7 @@ class  DoCatchTryThrowsBootcampManager {
 }
 
 class DoCatchTryThrowsBootcampViewModel: ObservableObject {
-    @Published var text: String = "Name"
+    @Published var text: String = "What's your name? Click to figure"
     let manager = DoCatchTryThrowsBootcampManager()
     
     func fetchTitle() {
@@ -68,7 +76,10 @@ class DoCatchTryThrowsBootcampViewModel: ObservableObject {
         do {
             let newTitle = try manager.getTitle3()
             self.text = newTitle
-        } catch let error {
+            
+            let finalText = try manager.getTitle4()
+            self.text = finalText
+        } catch {
             self.text = error.localizedDescription
         }
     }
