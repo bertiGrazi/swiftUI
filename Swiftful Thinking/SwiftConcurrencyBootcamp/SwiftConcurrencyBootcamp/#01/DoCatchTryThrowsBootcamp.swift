@@ -15,23 +15,25 @@ import SwiftUI
 class  DoCatchTryThrowsBootcampManager {
     var isActive: Bool = true
     
-    func getTitle() -> String? {
+    func getTitle() -> (title: String?, error: Error?) {
         if isActive {
-            return "Grazielli Lima Berti"
+            return ("Grazielli Lima Berti", nil)
         } else {
-            return nil
+            return (nil, URLError(.badURL))
         }
     }
 }
 
 class DoCatchTryThrowsBootcampViewModel: ObservableObject {
-    @Published var text: String = "Grazielli"
+    @Published var text: String = "Name"
     let manager = DoCatchTryThrowsBootcampManager()
     
     func fetchTitle() {
-        let newTitle = manager.getTitle()
-        if let myNewTitle = newTitle {
-            self.text = myNewTitle
+        let resultRequest = manager.getTitle()
+        if let newTitle = resultRequest.title {
+            self.text = newTitle
+        } else if let error = resultRequest.error {
+            self.text = error.localizedDescription
         }
     }
 }
