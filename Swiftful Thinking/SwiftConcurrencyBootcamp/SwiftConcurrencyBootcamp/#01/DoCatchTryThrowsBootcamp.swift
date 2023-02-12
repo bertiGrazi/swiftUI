@@ -22,11 +22,19 @@ class  DoCatchTryThrowsBootcampManager {
         }
     }
     
-    func getTitleTwo() -> Result<String, Error> {
+    func getTitle2() -> Result<String, Error> {
         if isActive {
             return .success("Grazielli Lima Berti")
         } else {
             return .failure(URLError(.cancelled))
+        }
+    }
+    
+    func getTitle3() throws -> String {
+        if isActive {
+            return "Grazielli Lima Berti"
+        } else {
+            throw URLError(.networkConnectionLost)
         }
     }
 }
@@ -37,20 +45,30 @@ class DoCatchTryThrowsBootcampViewModel: ObservableObject {
     
     func fetchTitle() {
         /*
-        let resultRequest = manager.getTitle()
-        if let newTitle = resultRequest.title {
-            self.text = newTitle
-        } else if let error = resultRequest.error {
-            self.text = error.localizedDescription
-        }*/
-        
-        let result = manager.getTitleTwo()
-        
-        switch result {
-        case .success(let newTitle):
-            self.text = newTitle
+            let resultRequest = manager.getTitle()
+            if let newTitle = resultRequest.title {
+                self.text = newTitle
+            } else if let error = resultRequest.error {
+                self.text = error.localizedDescription
+            }
+        */
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /*
+            let result = manager.getTitle2()
             
-        case .failure(let error):
+            switch result {
+            case .success(let newTitle):
+                self.text = newTitle
+                
+            case .failure(let error):
+                self.text = error.localizedDescription
+            }
+        */
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        do {
+            let newTitle = try manager.getTitle3()
+            self.text = newTitle
+        } catch let error {
             self.text = error.localizedDescription
         }
     }
