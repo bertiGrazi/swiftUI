@@ -31,11 +31,11 @@ class  DoCatchTryThrowsBootcampManager {
     }
     
     func getTitle3() throws -> String {
-//        if isActive {
-//            return "Grazielli Lima Berti"
-//        } else {
+        if isActive {
+            return "Grazielli Lima Berti"
+        } else {
             throw URLError(.networkConnectionLost)
-//        }
+        }
     }
     
     func getTitle4() throws -> String {
@@ -73,14 +73,24 @@ class DoCatchTryThrowsBootcampViewModel: ObservableObject {
             }
         */
         ////////////////////////////////////////////////////////////////////////////////////////////////////////
-        do {
-            let newTitle = try manager.getTitle3()
+        
+        /*
+            do {
+                let newTitle = try manager.getTitle3()
+                self.text = newTitle
+                
+                let finalText = try manager.getTitle4()
+                self.text = finalText
+            } catch {
+                self.text = error.localizedDescription
+            }
+         */
+        
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        let newTitle = try? manager.getTitle3()
+        if let newTitle = newTitle {
             self.text = newTitle
-            
-            let finalText = try manager.getTitle4()
-            self.text = finalText
-        } catch {
-            self.text = error.localizedDescription
         }
     }
 }
