@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+// video: https://www.youtube.com/watch?v=ss50RX7F7nE&list=PLwvDm4Vfkdphr2Dl4sY4rS9PLzPdyi8PM&index=2
 
 //do-catch = fazer-pegar
 // try = tentar
