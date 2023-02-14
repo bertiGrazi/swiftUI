@@ -12,6 +12,7 @@
 		B15243B729992C5F006589FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15243B629992C5F006589FC /* Assets.xcassets */; };
 		B15243BA29992C5F006589FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15243B929992C5F006589FC /* Preview Assets.xcassets */; };
 		B15243C129992CEE006589FC /* DoCatchTryThrowsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15243C029992CEE006589FC /* DoCatchTryThrowsBootcamp.swift */; };
+		B1B292EE299C3856000F7C42 /* BindingSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B292ED299C3856000F7C42 /* BindingSwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		B15243B629992C5F006589FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B15243B929992C5F006589FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B15243C029992CEE006589FC /* DoCatchTryThrowsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrowsBootcamp.swift; sourceTree = "<group>"; };
+		B1B292ED299C3856000F7C42 /* BindingSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingSwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		B15243B129992C5E006589FC /* SwiftConcurrencyBootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				B1B292EC299C3832000F7C42 /* Bootcamp(BegginerLevel) */,
 				B15243C229992D1F006589FC /* #01 */,
 				B15243C529992D43006589FC /* ContentView */,
 				B15243C429992D3B006589FC /* Resources */,
@@ -100,6 +103,14 @@
 				B15243B429992C5E006589FC /* ContentView.swift */,
 			);
 			path = ContentView;
+			sourceTree = "<group>";
+		};
+		B1B292EC299C3832000F7C42 /* Bootcamp(BegginerLevel) */ = {
+			isa = PBXGroup;
+			children = (
+				B1B292ED299C3856000F7C42 /* BindingSwiftUIView.swift */,
+			);
+			path = "Bootcamp(BegginerLevel)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 			files = (
 				B15243C129992CEE006589FC /* DoCatchTryThrowsBootcamp.swift in Sources */,
 				B15243B529992C5E006589FC /* ContentView.swift in Sources */,
+				B1B292EE299C3856000F7C42 /* BindingSwiftUIView.swift in Sources */,
 				B15243B329992C5E006589FC /* SwiftConcurrencyBootcampApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
