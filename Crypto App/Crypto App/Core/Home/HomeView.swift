@@ -18,7 +18,8 @@ struct HomeView: View {
             
             VStack {
                 HStack {
-                    CircleButtonView(iconName: "info")
+                    CircleButtonView(iconName: showPorfolio ? "plus" : "info")
+                        .animation(.none)
                     Spacer()
                     Text("Live Prices")
                         .font(.headline)
