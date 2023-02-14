@@ -12,7 +12,13 @@ import SwiftUI
 struct RocketHelpApp: App {
     var body: some Scene {
         WindowGroup {
-            RHLoginView()
+            NavigationView {
+                RHLoginView()
+                    .navigationBarHidden(true)
+                
+//                RHRequestView()
+//                    .navigationBarHidden(true)
+            }
         }
     }
 }
