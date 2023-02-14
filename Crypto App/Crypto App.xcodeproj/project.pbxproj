@@ -13,6 +13,7 @@
 		B189E1B1299C1748006A1710 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B189E1B0299C1748006A1710 /* Preview Assets.xcassets */; };
 		B189E1BC299C194B006A1710 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189E1BB299C194B006A1710 /* Color.swift */; };
 		B189E1C2299C20C9006A1710 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189E1C1299C20C9006A1710 /* HomeView.swift */; };
+		B189E1C6299C2251006A1710 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189E1C5299C2251006A1710 /* CircleButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B189E1B0299C1748006A1710 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B189E1BB299C194B006A1710 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B189E1C1299C20C9006A1710 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B189E1C5299C2251006A1710 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		B189E1BD299C2073006A1710 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B189E1C3299C2221006A1710 /* Components */,
 				B189E1BE299C20A3006A1710 /* Home */,
 			);
 			path = Core;
@@ -135,6 +138,22 @@
 			children = (
 			);
 			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		B189E1C3299C2221006A1710 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B189E1C4299C2241006A1710 /* CircleButton */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B189E1C4299C2241006A1710 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				B189E1C5299C2251006A1710 /* CircleButtonView.swift */,
+			);
+			path = CircleButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +229,7 @@
 				B189E1AC299C1748006A1710 /* ContentView.swift in Sources */,
 				B189E1C2299C20C9006A1710 /* HomeView.swift in Sources */,
 				B189E1AA299C1748006A1710 /* Crypto_AppApp.swift in Sources */,
+				B189E1C6299C2251006A1710 /* CircleButtonView.swift in Sources */,
 				B189E1BC299C194B006A1710 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,18 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Text("Header")
+                HStack {
+                    CircleButtonView(iconName: "info")
+                    Spacer()
+                    Text("Live Prices")
+                        .font(.headline)
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color.theme.accent)
+                    Spacer()
+                    CircleButtonView(iconName: "chevron.right")
+                }
+                .padding(.horizontal)
+                
                     Spacer(minLength: 0)
                 
             }
@@ -29,5 +40,6 @@ struct HomeView_Previews: PreviewProvider {
             HomeView()
                 .navigationBarHidden(true)
         }
+        .preferredColorScheme(.dark)
     }
 }
