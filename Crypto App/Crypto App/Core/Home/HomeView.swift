@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var showPorfolio: Bool = false
+    
     var body: some View {
         ZStack {
             //background layer
@@ -24,6 +26,12 @@ struct HomeView: View {
                         .foregroundColor(Color.theme.accent)
                     Spacer()
                     CircleButtonView(iconName: "chevron.right")
+                        .rotationEffect(Angle(degrees: showPorfolio ? 180 : 0))
+                        .onTapGesture {
+                            withAnimation(.spring()) {
+                                showPorfolio.toggle()
+                            }
+                        }
                 }
                 .padding(.horizontal)
                 
