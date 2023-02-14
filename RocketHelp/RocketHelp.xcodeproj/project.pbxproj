@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1000D54299AFD690015B696 /* RHNavLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000D53299AFD690015B696 /* RHNavLogo.swift */; };
 		B11E61632996E30C00F2FFDE /* RocketHelpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E61622996E30C00F2FFDE /* RocketHelpApp.swift */; };
 		B11E61652996E30C00F2FFDE /* RHLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E61642996E30C00F2FFDE /* RHLoginView.swift */; };
 		B11E61672996E30D00F2FFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11E61662996E30D00F2FFDE /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1000D53299AFD690015B696 /* RHNavLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHNavLogo.swift; sourceTree = "<group>"; };
 		B11E615F2996E30C00F2FFDE /* RocketHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B11E61622996E30C00F2FFDE /* RocketHelpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketHelpApp.swift; sourceTree = "<group>"; };
 		B11E61642996E30C00F2FFDE /* RHLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHLoginView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				B11E61752996EBE300F2FFDE /* RHButtonView.swift */,
 				B11E61772996F0BC00F2FFDE /* RHTextFieldView.swift */,
+				B1000D53299AFD690015B696 /* RHNavLogo.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1000D54299AFD690015B696 /* RHNavLogo.swift in Sources */,
 				B11E61652996E30C00F2FFDE /* RHLoginView.swift in Sources */,
 				B11E61632996E30C00F2FFDE /* RocketHelpApp.swift in Sources */,
 				B1F7930D2997048C00923D1C /* RHRequestView.swift in Sources */,

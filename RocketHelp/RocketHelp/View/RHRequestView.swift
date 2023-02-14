@@ -10,7 +10,7 @@ import SwiftUI
 struct RHRequestView: View {
     var body: some View {
         ZStack {
-            Color("Background_Gray")
+            Color("Background")
                 .ignoresSafeArea()
             
             VStack(alignment: .center) {
