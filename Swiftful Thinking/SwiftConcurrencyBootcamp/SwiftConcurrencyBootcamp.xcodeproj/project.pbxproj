@@ -12,6 +12,7 @@
 		B15243B729992C5F006589FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15243B629992C5F006589FC /* Assets.xcassets */; };
 		B15243BA29992C5F006589FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15243B929992C5F006589FC /* Preview Assets.xcassets */; };
 		B15243C129992CEE006589FC /* DoCatchTryThrowsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15243C029992CEE006589FC /* DoCatchTryThrowsBootcamp.swift */; };
+		B1A89CD4299CF58000F91DD5 /* ViewModelBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A89CD3299CF58000F91DD5 /* ViewModelBootcamp.swift */; };
 		B1B292EE299C3856000F7C42 /* BindingSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B292ED299C3856000F7C42 /* BindingSwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		B15243B629992C5F006589FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B15243B929992C5F006589FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B15243C029992CEE006589FC /* DoCatchTryThrowsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrowsBootcamp.swift; sourceTree = "<group>"; };
+		B1A89CD3299CF58000F91DD5 /* ViewModelBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBootcamp.swift; sourceTree = "<group>"; };
 		B1B292ED299C3856000F7C42 /* BindingSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingSwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				B1B292ED299C3856000F7C42 /* BindingSwiftUIView.swift */,
+				B1A89CD3299CF58000F91DD5 /* ViewModelBootcamp.swift */,
 			);
 			path = "Bootcamp(BegginerLevel)";
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				B15243C129992CEE006589FC /* DoCatchTryThrowsBootcamp.swift in Sources */,
 				B15243B529992C5E006589FC /* ContentView.swift in Sources */,
 				B1B292EE299C3856000F7C42 /* BindingSwiftUIView.swift in Sources */,
+				B1A89CD4299CF58000F91DD5 /* ViewModelBootcamp.swift in Sources */,
 				B15243B329992C5E006589FC /* SwiftConcurrencyBootcampApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
