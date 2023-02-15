@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B12C38C2299D4C2C001FDE51 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12C38C1299D4C2C001FDE51 /* CoinRowView.swift */; };
 		B12C38C4299D4CA8001FDE51 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12C38C3299D4CA8001FDE51 /* PreviewProvider.swift */; };
+		B12C38C6299D528E001FDE51 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12C38C5299D528E001FDE51 /* Double.swift */; };
 		B189E1AA299C1748006A1710 /* Crypto_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189E1A9299C1748006A1710 /* Crypto_AppApp.swift */; };
 		B189E1AC299C1748006A1710 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189E1AB299C1748006A1710 /* ContentView.swift */; };
 		B189E1AE299C1748006A1710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B189E1AD299C1748006A1710 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		B12C38C1299D4C2C001FDE51 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		B12C38C3299D4CA8001FDE51 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		B12C38C5299D528E001FDE51 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		B189E1A6299C1748006A1710 /* Crypto App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B189E1A9299C1748006A1710 /* Crypto_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto_AppApp.swift; sourceTree = "<group>"; };
 		B189E1AB299C1748006A1710 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				B189E1BB299C194B006A1710 /* Color.swift */,
 				B12C38C3299D4CA8001FDE51 /* PreviewProvider.swift */,
+				B12C38C5299D528E001FDE51 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				B189E1BC299C194B006A1710 /* Color.swift in Sources */,
 				B1E41061299C263D0052DA37 /* CircleButtonAnimationView.swift in Sources */,
 				B12C38C4299D4CA8001FDE51 /* PreviewProvider.swift in Sources */,
+				B12C38C6299D528E001FDE51 /* Double.swift in Sources */,
 				B1F0362B299D385E0007C528 /* CoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
