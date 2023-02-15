@@ -14,6 +14,7 @@
 		B11E616A2996E30D00F2FFDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11E61692996E30D00F2FFDE /* Preview Assets.xcassets */; };
 		B11E61762996EBE400F2FFDE /* RHButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E61752996EBE300F2FFDE /* RHButtonView.swift */; };
 		B11E61782996F0BC00F2FFDE /* RHTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E61772996F0BC00F2FFDE /* RHTextFieldView.swift */; };
+		B19CB589299C576500327184 /* RequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19CB588299C576500327184 /* RequestViewModel.swift */; };
 		B1F7930D2997048C00923D1C /* RHRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7930C2997048C00923D1C /* RHRequestView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		B11E61732996E49700F2FFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B11E61752996EBE300F2FFDE /* RHButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHButtonView.swift; sourceTree = "<group>"; };
 		B11E61772996F0BC00F2FFDE /* RHTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHTextFieldView.swift; sourceTree = "<group>"; };
+		B19CB588299C576500327184 /* RequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewModel.swift; sourceTree = "<group>"; };
 		B1F7930C2997048C00923D1C /* RHRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHRequestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 		B11E61612996E30C00F2FFDE /* RocketHelp */ = {
 			isa = PBXGroup;
 			children = (
+				B19CB581299C56E800327184 /* Core */,
 				B11E61742996EBBB00F2FFDE /* Components */,
 				B11E61732996E49700F2FFDE /* Info.plist */,
 				B11E61722996E32600F2FFDE /* App */,
@@ -89,8 +92,6 @@
 		B11E61712996E32000F2FFDE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B11E61642996E30C00F2FFDE /* RHLoginView.swift */,
-				B1F7930C2997048C00923D1C /* RHRequestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,6 +112,64 @@
 				B1000D53299AFD690015B696 /* RHNavLogo.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B19CB581299C56E800327184 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B19CB585299C573C00327184 /* Request */,
+				B19CB582299C56F100327184 /* Login */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B19CB582299C56F100327184 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B19CB584299C572D00327184 /* ViewModels */,
+				B19CB583299C572800327184 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B19CB583299C572800327184 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B11E61642996E30C00F2FFDE /* RHLoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B19CB584299C572D00327184 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B19CB585299C573C00327184 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B19CB587299C574D00327184 /* ViewModels */,
+				B19CB586299C574600327184 /* View */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		B19CB586299C574600327184 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1F7930C2997048C00923D1C /* RHRequestView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B19CB587299C574D00327184 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B19CB588299C576500327184 /* RequestViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +247,7 @@
 				B11E61632996E30C00F2FFDE /* RocketHelpApp.swift in Sources */,
 				B1F7930D2997048C00923D1C /* RHRequestView.swift in Sources */,
 				B11E61782996F0BC00F2FFDE /* RHTextFieldView.swift in Sources */,
+				B19CB589299C576500327184 /* RequestViewModel.swift in Sources */,
 				B11E61762996EBE400F2FFDE /* RHButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
