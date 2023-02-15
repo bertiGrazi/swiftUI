@@ -28,6 +28,7 @@ struct ViewModelBootcamp: View {
                             .bold()
                     }
                 }
+                .onDelete(perform: deleteFruit)
             }
             .listStyle(GroupedListStyle())
             .navigationTitle("Fruint List")
@@ -45,6 +46,10 @@ struct ViewModelBootcamp: View {
         fruitArray.append(fruit1)
         fruitArray.append(fruit2)
         fruitArray.append(fruit3)
+    }
+    
+    func deleteFruit(index: IndexSet) {
+        fruitArray.remove(atOffsets: index)
     }
 }
 
