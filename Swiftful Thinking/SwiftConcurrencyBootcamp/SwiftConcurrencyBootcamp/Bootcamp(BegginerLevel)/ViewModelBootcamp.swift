@@ -17,6 +17,10 @@ class FruitViewModel: ObservableObject {
     @Published var fruitArray: [FruitModel] = []
     @Published var isLoading: Bool = false
     
+    init() {
+        getFruit()
+    }
+    
     func getFruit() {
         let fruit1 = FruitModel(name: "Orange", count: 1)
         let fruit2 = FruitModel(name: "Banana", count: 2)
@@ -69,36 +73,34 @@ struct ViewModelBootcamp: View {
             .navigationTitle("Fruint List")
             .navigationBarItems(
                 trailing: NavigationLink(
-                    destination: { RandomScreen() },
+                    destination: { RandomScreen(fruitViewModel: fruitViewModel) },
                     label: {
                         Image(systemName: "arrow.right")
                             .font(.title3)
                     })
             )
-            .onAppear {
-                fruitViewModel.getFruit()
-            }
         }
     }
 }
 
 struct RandomScreen: View {
     @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var fruitViewModel: FruitViewModel
     
     var body: some View {
         ZStack {
             Color.green.ignoresSafeArea()
             
-            Button {
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                Text("Go Back")
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
+            VStack {
+                ForEach(fruitViewModel.fruitArray) { fruit in
+                    Text(fruit.name)
+                        .foregroundColor(.white)
+                        .font(.headline)
+                    
+                }
             }
-            
         }
+        //.navigationBarBackButtonHidden(true)
     }
 }
 
