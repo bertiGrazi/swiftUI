@@ -13,39 +13,22 @@ struct FruitModel: Identifiable {
     let count: Int
 }
 
-struct ViewModelBootcamp: View {
-    @State var fruitArray: [FruitModel] = []
-    
-    var body: some View {
-        NavigationView {
-            List {
-                ForEach(fruitArray) { fruit in
-                    HStack {
-                        Text("\(fruit.count)")
-                            .foregroundColor(.red)
-                        Text(fruit.name)
-                            .font(.headline)
-                            .bold()
-                    }
-                }
-                .onDelete(perform: deleteFruit)
-            }
-            .listStyle(GroupedListStyle())
-            .navigationTitle("Fruint List")
-            .onAppear {
-                getFruit()
-            }
-        }
-    }
+class FruitViewModel: ObservableObject {
+    @Published var fruitArray: [FruitModel] = []
+    @Published var isLoading: Bool = false
     
     func getFruit() {
         let fruit1 = FruitModel(name: "Orange", count: 1)
         let fruit2 = FruitModel(name: "Banana", count: 2)
         let fruit3 = FruitModel(name: "Watermelon", count: 88)
         
-        fruitArray.append(fruit1)
-        fruitArray.append(fruit2)
-        fruitArray.append(fruit3)
+        isLoading = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.fruitArray.append(fruit1)
+            self.fruitArray.append(fruit2)
+            self.fruitArray.append(fruit3)
+            self.isLoading = false
+        }
     }
     
     func deleteFruit(index: IndexSet) {
@@ -53,8 +36,75 @@ struct ViewModelBootcamp: View {
     }
 }
 
+struct ViewModelBootcamp: View {
+    ///StateObject irá persistir quando a View der um update/refresh
+    //@StateObject -> Use this on creation / init
+    //@ObservedObject -> se this for subviews
+    @StateObject var fruitViewModel: FruitViewModel = FruitViewModel()
+    
+    var body: some View {
+        NavigationView {
+            List {
+                
+                if fruitViewModel.isLoading {
+                    HStack(alignment: .center) {
+                        ProgressView()
+                            .padding()
+                    }
+                    
+                } else {
+                    ForEach(fruitViewModel.fruitArray) { fruit in
+                        HStack {
+                            Text("\(fruit.count)")
+                                .foregroundColor(.red)
+                            Text(fruit.name)
+                                .font(.headline)
+                                .bold()
+                        }
+                    }
+                    .onDelete(perform: fruitViewModel.deleteFruit)
+                }
+            }
+            .listStyle(GroupedListStyle())
+            .navigationTitle("Fruint List")
+            .navigationBarItems(
+                trailing: NavigationLink(
+                    destination: { RandomScreen() },
+                    label: {
+                        Image(systemName: "arrow.right")
+                            .font(.title3)
+                    })
+            )
+            .onAppear {
+                fruitViewModel.getFruit()
+            }
+        }
+    }
+}
+
+struct RandomScreen: View {
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        ZStack {
+            Color.green.ignoresSafeArea()
+            
+            Button {
+                presentationMode.wrappedValue.dismiss()
+            } label: {
+                Text("Go Back")
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+            }
+            
+        }
+    }
+}
+
 struct ViewModelBootcamp_Previews: PreviewProvider {
     static var previews: some View {
         ViewModelBootcamp()
+        //RandomScreen()
     }
 }
