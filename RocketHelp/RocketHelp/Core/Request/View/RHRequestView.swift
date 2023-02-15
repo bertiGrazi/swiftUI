@@ -73,16 +73,12 @@ struct RHRequestView: View {
                                 }
                                 .contentShape(Rectangle())
                                 .onTapGesture {
-                                        withAnimation {
-                                            requestViewModel.currentTab = tab
-                                                
-                                        }
+                                    requestViewModel.currentTab = tab
                                 }
                         }
                         .padding(.horizontal)
                     }
                 }
-                
             }
             .navigationBarBackButtonHidden(true)
     }
