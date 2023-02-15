@@ -43,6 +43,12 @@ struct PopoverBootcamp: View {
                 }
             }
             .zIndex(2.0)
+            
+            // METHOD 3 - ANIMATION OFFSET
+            NewScreen(showNewScreen: $showNewScreen)
+                .padding(.top, 100)
+                .offset(y: showNewScreen ? 0 : UIScreen.main.bounds.height)
+                .animation(.spring())
         }
     }
 }
