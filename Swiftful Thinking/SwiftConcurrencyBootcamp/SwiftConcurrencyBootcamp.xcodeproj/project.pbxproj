@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B12C38C8299D6952001FDE51 /* PopoverBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12C38C7299D6951001FDE51 /* PopoverBootcamp.swift */; };
 		B15243B329992C5E006589FC /* SwiftConcurrencyBootcampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15243B229992C5E006589FC /* SwiftConcurrencyBootcampApp.swift */; };
 		B15243B529992C5E006589FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15243B429992C5E006589FC /* ContentView.swift */; };
 		B15243B729992C5F006589FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15243B629992C5F006589FC /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B12C38C7299D6951001FDE51 /* PopoverBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverBootcamp.swift; sourceTree = "<group>"; };
 		B15243AF29992C5E006589FC /* SwiftConcurrencyBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrencyBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15243B229992C5E006589FC /* SwiftConcurrencyBootcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurrencyBootcampApp.swift; sourceTree = "<group>"; };
 		B15243B429992C5E006589FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				B1B292ED299C3856000F7C42 /* BindingSwiftUIView.swift */,
 				B1A89CD3299CF58000F91DD5 /* ViewModelBootcamp.swift */,
+				B12C38C7299D6951001FDE51 /* PopoverBootcamp.swift */,
 			);
 			path = "Bootcamp(BegginerLevel)";
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				B15243B529992C5E006589FC /* ContentView.swift in Sources */,
 				B1B292EE299C3856000F7C42 /* BindingSwiftUIView.swift in Sources */,
 				B1A89CD4299CF58000F91DD5 /* ViewModelBootcamp.swift in Sources */,
+				B12C38C8299D6952001FDE51 /* PopoverBootcamp.swift in Sources */,
 				B15243B329992C5E006589FC /* SwiftConcurrencyBootcampApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
