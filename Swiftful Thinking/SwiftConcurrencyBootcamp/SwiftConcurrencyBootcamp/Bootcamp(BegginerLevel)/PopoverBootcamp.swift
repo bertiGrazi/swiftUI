@@ -26,33 +26,50 @@ struct PopoverBootcamp: View {
                 .font(.largeTitle)
                 Spacer()
             }
-        }
-        // METHOD 1 - SHEET
-        .sheet(isPresented: $showNewScreen) {
-            NewScreen()
+            
+            //        // METHOD 1 - SHEET
+            //        .sheet(isPresented: $showNewScreen) {
+            //            NewScreen()
+            //
+            //
+            //    }
+            // METHOD 2 - TRANSITION
+            ZStack {
+                if showNewScreen {
+                    NewScreen(showNewScreen: $showNewScreen)
+                        .padding(.top, 100)
+                        .transition(.move(edge: .bottom))
+                        .animation(.default)
+                }
+            }
+            .zIndex(2.0)
         }
     }
 }
 
+
 struct NewScreen: View {
     @Environment(\.presentationMode) var presentationMode
+    @Binding var showNewScreen: Bool
     
     var body: some View {
         ZStack(alignment: .topLeading) {
             Color.purple.edgesIgnoringSafeArea(.all)
             
             Button {
-                presentationMode.wrappedValue.dismiss()
+                //presentationMode.wrappedValue.dismiss()
+                showNewScreen.toggle()
             } label: {
                 Image(systemName: "xmark")
                     .foregroundColor(.white)
                     .font(.largeTitle)
                     .padding(20)
             }
-
+            
         }
     }
 }
+
 struct PopoverBootcamp_Previews: PreviewProvider {
     static var previews: some View {
         PopoverBootcamp()
