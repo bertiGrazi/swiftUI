@@ -44,7 +44,7 @@ struct RHLoginView: View {
                                 Button(action: {
                                     self.selection = 1
                                 }) {
-                                    ButtonView(textButton: "Entrar") {
+                                    RHButtonView(textButton: "Entrar") {
                                         self.selection = 1
                                     }
                                 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct ButtonView: View {
+public struct RHButtonView: View {
     var textButton: String = ""
     var actionButton: () -> Void
     
@@ -28,7 +28,7 @@ public struct ButtonView: View {
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(textButton: "Entrar", actionButton: {})
+        RHButtonView(textButton: "Entrar", actionButton: {})
             .previewLayout(.sizeThatFits)
     }
 }

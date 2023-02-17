@@ -15,10 +15,11 @@ struct RHRequestView: View {
     let tabs = ["EM ANDAMENTO", "FINALIZADOS"]
     
     var body: some View {
-            ZStack {
+        ZStack {
                 Color("Background")
                     .ignoresSafeArea()
                 
+            // Logo
                 VStack {
                     HStack {
                         Image("logo_header")
@@ -38,8 +39,9 @@ struct RHRequestView: View {
                     Spacer(minLength: 0)
                     
                 }
-                
+           
                 VStack(spacing: 32) {
+                    // Label and count Request
                     HStack {
                         Text("Solicitações")
                             .foregroundColor(.white)
@@ -54,6 +56,7 @@ struct RHRequestView: View {
                     }
                     .padding(.horizontal)
                     
+                    //Segment Bar
                     HStack(spacing: 10) {
                         ForEach(tabs, id: \.self) { tab in
                             Text(tab)
@@ -78,7 +81,20 @@ struct RHRequestView: View {
                         }
                         .padding(.horizontal)
                     }
+                    
+                    //Card List
+                    VStack(spacing: 16) {
+                        RHApplicationCardView(colorCard: Color("Yellow"), iconCard: Image(systemName: "hourglass"))
+                        
+                        RHApplicationCardView(colorCard: Color("Yellow"), iconCard: Image(systemName: "hourglass"))
+                        
+                        RHApplicationCardView(colorCard: Color("Yellow"), iconCard: Image(systemName: "hourglass"))
+                    }
+                    
+                        //Buttom
+                        RHButtonView(textButton: "NOVA SOLICITAÇÃO", actionButton: {})
                 }
+            
             }
             .navigationBarBackButtonHidden(true)
     }
