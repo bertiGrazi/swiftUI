@@ -15,12 +15,12 @@ struct RHRequestView: View {
     let tabs = ["EM ANDAMENTO", "FINALIZADOS"]
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
                 Color("Background")
                     .ignoresSafeArea()
                 
-            // Logo
-                VStack {
+            VStack(spacing: 0) {
+                // Header
                     HStack {
                         Image("logo_header")
                         
@@ -37,10 +37,8 @@ struct RHRequestView: View {
                     .background(Color("Background_Gray"))
                     
                     Spacer(minLength: 0)
-                    
-                }
            
-                VStack(spacing: 32) {
+                VStack(spacing: 10) {
                     // Label and count Request
                     HStack {
                         Text("Solicitações")
@@ -55,9 +53,10 @@ struct RHRequestView: View {
                             .font(.title3)
                     }
                     .padding(.horizontal)
+                    .padding(.vertical, 24)
                     
                     //Segment Bar
-                    HStack(spacing: 10) {
+                    HStack(spacing: 5) {
                         ForEach(tabs, id: \.self) { tab in
                             Text(tab)
                                 .font(.callout)
@@ -81,20 +80,26 @@ struct RHRequestView: View {
                         }
                         .padding(.horizontal)
                     }
+                    .padding(.vertical, 16)
+                    
+                    //Spacer()
                     
                     //Card List
                     VStack(spacing: 16) {
-                        RHApplicationCardView(colorCard: Color("Yellow"), iconCard: Image(systemName: "hourglass"))
-                        
-                        RHApplicationCardView(colorCard: Color("Yellow"), iconCard: Image(systemName: "hourglass"))
-                        
-                        RHApplicationCardView(colorCard: Color("Yellow"), iconCard: Image(systemName: "hourglass"))
+                        ScrollView(.vertical, showsIndicators: false) {
+                            VStack(spacing: 16) {
+                                RHApplicationCardView(colorCard: Color("Yellow"), iconCard: Image(systemName: "hourglass"))
+                                
+                                RHApplicationCardView(colorCard: Color("Yellow"), iconCard: Image(systemName: "hourglass"))
+                                
+                                RHApplicationCardView(colorCard: Color("Yellow"), iconCard: Image(systemName: "hourglass"))
+                            }
+                        }
                     }
-                    
-                        //Buttom
-                        RHButtonView(textButton: "NOVA SOLICITAÇÃO", actionButton: {})
                 }
-            
+            }
+                //Buttom
+                RHButtonView(textButton: "NOVA SOLICITAÇÃO", actionButton: {})
             }
             .navigationBarBackButtonHidden(true)
     }
