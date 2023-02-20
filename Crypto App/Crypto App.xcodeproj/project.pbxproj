@@ -22,6 +22,9 @@
 		B1E41061299C263D0052DA37 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E41060299C263D0052DA37 /* CircleButtonAnimationView.swift */; };
 		B1F0362B299D385E0007C528 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F0362A299D385E0007C528 /* CoinModel.swift */; };
 		B1F433C329A3F04300244E6A /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F433C229A3F04300244E6A /* NetworkingManager.swift */; };
+		B1F433C829A3F91600244E6A /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F433C729A3F91600244E6A /* CoinImageView.swift */; };
+		B1F433CA29A3FA4400244E6A /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F433C929A3FA4400244E6A /* CoinImageService.swift */; };
+		B1F433CC29A3FB5900244E6A /* CoinImageViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F433CB29A3FB5900244E6A /* CoinImageViewmodel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		B1E41060299C263D0052DA37 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		B1F0362A299D385E0007C528 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		B1F433C229A3F04300244E6A /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		B1F433C729A3F91600244E6A /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
+		B1F433C929A3FA4400244E6A /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
+		B1F433CB29A3FB5900244E6A /* CoinImageViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewmodel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 		B189E1C3299C2221006A1710 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B1F433C429A3F8EC00244E6A /* CoinImage */,
 				B189E1C4299C2241006A1710 /* CircleButton */,
 			);
 			path = Components;
@@ -184,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				B1D3FD8129A3914600FF0E75 /* CoinDataService.swift */,
+				B1F433C929A3FA4400244E6A /* CoinImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -202,6 +210,15 @@
 				B1F433C229A3F04300244E6A /* NetworkingManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B1F433C429A3F8EC00244E6A /* CoinImage */ = {
+			isa = PBXGroup;
+			children = (
+				B1F433C729A3F91600244E6A /* CoinImageView.swift */,
+				B1F433CB29A3FB5900244E6A /* CoinImageViewmodel.swift */,
+			);
+			path = CoinImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,13 +296,16 @@
 				B1D3FD7F29A3880E00FF0E75 /* HomeViewModel.swift in Sources */,
 				B189E1AC299C1748006A1710 /* ContentView.swift in Sources */,
 				B189E1C2299C20C9006A1710 /* HomeView.swift in Sources */,
+				B1F433C829A3F91600244E6A /* CoinImageView.swift in Sources */,
 				B189E1AA299C1748006A1710 /* Crypto_AppApp.swift in Sources */,
 				B189E1C6299C2251006A1710 /* CircleButtonView.swift in Sources */,
 				B189E1BC299C194B006A1710 /* Color.swift in Sources */,
 				B1F433C329A3F04300244E6A /* NetworkingManager.swift in Sources */,
 				B1E41061299C263D0052DA37 /* CircleButtonAnimationView.swift in Sources */,
+				B1F433CC29A3FB5900244E6A /* CoinImageViewmodel.swift in Sources */,
 				B12C38C4299D4CA8001FDE51 /* PreviewProvider.swift in Sources */,
 				B12C38C6299D528E001FDE51 /* Double.swift in Sources */,
+				B1F433CA29A3FA4400244E6A /* CoinImageService.swift in Sources */,
 				B1F0362B299D385E0007C528 /* CoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
