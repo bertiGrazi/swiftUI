@@ -22,16 +22,10 @@ class CoinDataService {
         
         //download with combine
         coinSubscription = NetworkingManager.download(url: url)
-            .decode(type: [CoinModel].self, decoder: JSONDecoder()).sink { (completion) in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            } receiveValue: { [weak self] (returnCoins) in
-                self?.allCoins = returnCoins
+            .decode(type: [CoinModel].self, decoder: JSONDecoder())
+            .sink(receiveCompletion:  NetworkingManager.handleCompletion, receiveValue: { [weak self] (returnedCoins) in
+                self?.allCoins = returnedCoins
                 self?.coinSubscription?.cancel()
-            }
+            })
     }
 }
