@@ -12,7 +12,7 @@ class HomeViewModel: ObservableObject {
     @Published var portfolioCoins: [CoinModel] = []
     
     init() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.allCoins.append(DeveloperPreview.instance.coin)
             self.portfolioCoins.append(DeveloperPreview.instance.coin)
         }
