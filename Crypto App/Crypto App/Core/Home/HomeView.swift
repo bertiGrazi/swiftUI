@@ -19,6 +19,9 @@ struct HomeView: View {
             VStack {
 
                 homeHeader
+                List {
+                    CoinRowView(coin: DeveloperPreview.isntance.coin, showHoldingColumn: false)
+                }.listStyle(PlainListStyle())
                     Spacer(minLength: 0)
             }
         }
