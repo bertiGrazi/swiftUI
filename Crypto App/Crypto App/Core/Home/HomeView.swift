@@ -33,6 +33,10 @@ struct HomeView: View {
                 }
                     Spacer(minLength: 0)
             }
+            
+            if viewModel.isLoading {
+                ProgressView("Loading")
+            }
         }
     }
 }
