@@ -19,10 +19,10 @@ public struct RHButtonView: View {
                     .foregroundColor(.white)
             }
         }
-        .padding(10)
         .frame(width: 364, height: 56)
         .background(Color("Green_700"))
         .cornerRadius(10)
+        .padding(20)
     }
 }
 

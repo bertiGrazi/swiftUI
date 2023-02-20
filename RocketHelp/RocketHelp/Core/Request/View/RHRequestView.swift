@@ -53,7 +53,6 @@ struct RHRequestView: View {
                             .font(.title3)
                     }
                     .padding(.horizontal)
-                    .padding(.vertical, 24)
                     
                     //Segment Bar
                     HStack(spacing: 5) {
@@ -80,7 +79,7 @@ struct RHRequestView: View {
                         }
                         .padding(.horizontal)
                     }
-                    .padding(.vertical, 16)
+                    .padding(.vertical, 10)
                     
                     //Spacer()
                     
@@ -97,6 +96,8 @@ struct RHRequestView: View {
                         }
                     }
                 }
+                .padding(.vertical)
+            
             }
                 //Buttom
                 RHButtonView(textButton: "NOVA SOLICITAÇÃO", actionButton: {})
