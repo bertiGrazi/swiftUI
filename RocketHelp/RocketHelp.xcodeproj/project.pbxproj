@@ -15,6 +15,7 @@
 		B11E61782996F0BC00F2FFDE /* RHTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E61772996F0BC00F2FFDE /* RHTextFieldView.swift */; };
 		B15C214B29A037A300F13802 /* RHApplicationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C214A29A037A300F13802 /* RHApplicationCardView.swift */; };
 		B19CB589299C576500327184 /* RequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19CB588299C576500327184 /* RequestViewModel.swift */; };
+		B1E77B5429A5448F00C8F1AF /* NewRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E77B5329A5448F00C8F1AF /* NewRequestView.swift */; };
 		B1F7930D2997048C00923D1C /* RHRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7930C2997048C00923D1C /* RHRequestView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		B11E61772996F0BC00F2FFDE /* RHTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHTextFieldView.swift; sourceTree = "<group>"; };
 		B15C214A29A037A300F13802 /* RHApplicationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHApplicationCardView.swift; sourceTree = "<group>"; };
 		B19CB588299C576500327184 /* RequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewModel.swift; sourceTree = "<group>"; };
+		B1E77B5329A5448F00C8F1AF /* NewRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestView.swift; sourceTree = "<group>"; };
 		B1F7930C2997048C00923D1C /* RHRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHRequestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 		B19CB581299C56E800327184 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B1E77B5029A5445C00C8F1AF /* NewRequest */,
 				B19CB585299C573C00327184 /* Request */,
 				B19CB582299C56F100327184 /* Login */,
 			);
@@ -170,6 +173,30 @@
 				B19CB588299C576500327184 /* RequestViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B1E77B5029A5445C00C8F1AF /* NewRequest */ = {
+			isa = PBXGroup;
+			children = (
+				B1E77B5229A5447B00C8F1AF /* ViewModel */,
+				B1E77B5129A5446B00C8F1AF /* View */,
+			);
+			path = NewRequest;
+			sourceTree = "<group>";
+		};
+		B1E77B5129A5446B00C8F1AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1E77B5329A5448F00C8F1AF /* NewRequestView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1E77B5229A5447B00C8F1AF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +274,7 @@
 				B1F7930D2997048C00923D1C /* RHRequestView.swift in Sources */,
 				B11E61782996F0BC00F2FFDE /* RHTextFieldView.swift in Sources */,
 				B15C214B29A037A300F13802 /* RHApplicationCardView.swift in Sources */,
+				B1E77B5429A5448F00C8F1AF /* NewRequestView.swift in Sources */,
 				B19CB589299C576500327184 /* RequestViewModel.swift in Sources */,
 				B11E61762996EBE400F2FFDE /* RHButtonView.swift in Sources */,
 			);
