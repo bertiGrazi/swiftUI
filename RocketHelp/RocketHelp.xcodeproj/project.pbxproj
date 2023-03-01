@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B10C8E3129AFCBF600133A19 /* RHMyRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10C8E3029AFCBF600133A19 /* RHMyRequestView.swift */; };
+		B10C8E3329AFCED300133A19 /* RHStatusRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10C8E3229AFCED300133A19 /* RHStatusRequestView.swift */; };
 		B11E61632996E30C00F2FFDE /* RocketHelpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E61622996E30C00F2FFDE /* RocketHelpApp.swift */; };
 		B11E61652996E30C00F2FFDE /* RHLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E61642996E30C00F2FFDE /* RHLoginView.swift */; };
 		B11E61672996E30D00F2FFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11E61662996E30D00F2FFDE /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		B10C8E3029AFCBF600133A19 /* RHMyRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHMyRequestView.swift; sourceTree = "<group>"; };
+		B10C8E3229AFCED300133A19 /* RHStatusRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHStatusRequestView.swift; sourceTree = "<group>"; };
 		B11E615F2996E30C00F2FFDE /* RocketHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B11E61622996E30C00F2FFDE /* RocketHelpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketHelpApp.swift; sourceTree = "<group>"; };
 		B11E61642996E30C00F2FFDE /* RHLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHLoginView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				B11E61752996EBE300F2FFDE /* RHButtonView.swift */,
 				B11E61772996F0BC00F2FFDE /* RHTextFieldView.swift */,
 				B15C214A29A037A300F13802 /* RHApplicationCardView.swift */,
+				B10C8E3229AFCED300133A19 /* RHStatusRequestView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				B10C8E3129AFCBF600133A19 /* RHMyRequestView.swift in Sources */,
 				B11E61782996F0BC00F2FFDE /* RHTextFieldView.swift in Sources */,
 				B15C214B29A037A300F13802 /* RHApplicationCardView.swift in Sources */,
+				B10C8E3329AFCED300133A19 /* RHStatusRequestView.swift in Sources */,
 				B1E77B5429A5448F00C8F1AF /* RHNewRequestView.swift in Sources */,
 				B19CB589299C576500327184 /* RequestViewModel.swift in Sources */,
 				B11E61762996EBE400F2FFDE /* RHButtonView.swift in Sources */,
