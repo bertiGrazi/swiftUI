@@ -9,29 +9,31 @@ import SwiftUI
 
 struct RHRequestView: View {
     @StateObject var requestViewModel: RequestViewModel = .init()
+    @State var selection: Int? = nil
     
     @Namespace var animation
+    
     
     let tabs = ["EM ANDAMENTO", "FINALIZADOS"]
     
     var body: some View {
         ZStack(alignment: .bottom) {
-                Color("Background")
-                    .ignoresSafeArea()
-                
+            Color("Background")
+                .ignoresSafeArea()
+            
             VStack(spacing: 0) {
-                    headerView
-                    
-                    Spacer(minLength: 0)
-           
+                headerView
+                
+                Spacer(minLength: 0)
+                
                 VStack(spacing: 10) {
                     // Label and count Request
                     leabelRequest
-                    .padding(.horizontal)
+                        .padding(.horizontal)
                     
                     //Segment Bar
                     requestSegmentBar
-                    .padding(.vertical, 10)
+                        .padding(.vertical, 10)
                     
                     //Card List
                     VStack(spacing: 16) {
@@ -47,12 +49,20 @@ struct RHRequestView: View {
                     }
                 }
                 .padding(.vertical)
-            
+                
             }
-                //Buttom
-                RHButtonView(textButton: "Nova solicitação", actionButton: {})
+            //Buttom
+            NavigationLink(destination: RHNewRequestView(), tag: 1, selection: $selection) {
+                Button(action: {
+                    self.selection = 1
+                }) {
+                    RHButtonView(textButton: "Nova solicitação") {
+                        self.selection = 1
+                    }
+                }
             }
-            .navigationBarBackButtonHidden(true)
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

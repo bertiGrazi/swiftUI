@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10C8E3129AFCBF600133A19 /* RHMyRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10C8E3029AFCBF600133A19 /* RHMyRequestView.swift */; };
 		B11E61632996E30C00F2FFDE /* RocketHelpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E61622996E30C00F2FFDE /* RocketHelpApp.swift */; };
 		B11E61652996E30C00F2FFDE /* RHLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E61642996E30C00F2FFDE /* RHLoginView.swift */; };
 		B11E61672996E30D00F2FFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11E61662996E30D00F2FFDE /* Assets.xcassets */; };
@@ -15,11 +16,12 @@
 		B11E61782996F0BC00F2FFDE /* RHTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E61772996F0BC00F2FFDE /* RHTextFieldView.swift */; };
 		B15C214B29A037A300F13802 /* RHApplicationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15C214A29A037A300F13802 /* RHApplicationCardView.swift */; };
 		B19CB589299C576500327184 /* RequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19CB588299C576500327184 /* RequestViewModel.swift */; };
-		B1E77B5429A5448F00C8F1AF /* NewRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E77B5329A5448F00C8F1AF /* NewRequestView.swift */; };
+		B1E77B5429A5448F00C8F1AF /* RHNewRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E77B5329A5448F00C8F1AF /* RHNewRequestView.swift */; };
 		B1F7930D2997048C00923D1C /* RHRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7930C2997048C00923D1C /* RHRequestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B10C8E3029AFCBF600133A19 /* RHMyRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHMyRequestView.swift; sourceTree = "<group>"; };
 		B11E615F2996E30C00F2FFDE /* RocketHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B11E61622996E30C00F2FFDE /* RocketHelpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketHelpApp.swift; sourceTree = "<group>"; };
 		B11E61642996E30C00F2FFDE /* RHLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHLoginView.swift; sourceTree = "<group>"; };
@@ -30,7 +32,7 @@
 		B11E61772996F0BC00F2FFDE /* RHTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHTextFieldView.swift; sourceTree = "<group>"; };
 		B15C214A29A037A300F13802 /* RHApplicationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHApplicationCardView.swift; sourceTree = "<group>"; };
 		B19CB588299C576500327184 /* RequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewModel.swift; sourceTree = "<group>"; };
-		B1E77B5329A5448F00C8F1AF /* NewRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestView.swift; sourceTree = "<group>"; };
+		B1E77B5329A5448F00C8F1AF /* RHNewRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHNewRequestView.swift; sourceTree = "<group>"; };
 		B1F7930C2997048C00923D1C /* RHRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHRequestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +47,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B10C8E2D29AFCBB900133A19 /* MyRequest */ = {
+			isa = PBXGroup;
+			children = (
+				B10C8E2F29AFCBCE00133A19 /* ViewModel */,
+				B10C8E2E29AFCBC400133A19 /* View */,
+			);
+			path = MyRequest;
+			sourceTree = "<group>";
+		};
+		B10C8E2E29AFCBC400133A19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B10C8E3029AFCBF600133A19 /* RHMyRequestView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B10C8E2F29AFCBCE00133A19 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B11E61562996E30C00F2FFDE = {
 			isa = PBXGroup;
 			children = (
@@ -68,7 +94,6 @@
 				B11E61742996EBBB00F2FFDE /* Components */,
 				B11E61732996E49700F2FFDE /* Info.plist */,
 				B11E61722996E32600F2FFDE /* App */,
-				B11E61712996E32000F2FFDE /* View */,
 				B11E61702996E31500F2FFDE /* Resources */,
 				B11E61682996E30D00F2FFDE /* Preview Content */,
 			);
@@ -89,13 +114,6 @@
 				B11E61662996E30D00F2FFDE /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		B11E61712996E32000F2FFDE /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		B11E61722996E32600F2FFDE /* App */ = {
@@ -119,6 +137,7 @@
 		B19CB581299C56E800327184 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B10C8E2D29AFCBB900133A19 /* MyRequest */,
 				B1E77B5029A5445C00C8F1AF /* NewRequest */,
 				B19CB585299C573C00327184 /* Request */,
 				B19CB582299C56F100327184 /* Login */,
@@ -187,7 +206,7 @@
 		B1E77B5129A5446B00C8F1AF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B1E77B5329A5448F00C8F1AF /* NewRequestView.swift */,
+				B1E77B5329A5448F00C8F1AF /* RHNewRequestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,9 +291,10 @@
 				B11E61652996E30C00F2FFDE /* RHLoginView.swift in Sources */,
 				B11E61632996E30C00F2FFDE /* RocketHelpApp.swift in Sources */,
 				B1F7930D2997048C00923D1C /* RHRequestView.swift in Sources */,
+				B10C8E3129AFCBF600133A19 /* RHMyRequestView.swift in Sources */,
 				B11E61782996F0BC00F2FFDE /* RHTextFieldView.swift in Sources */,
 				B15C214B29A037A300F13802 /* RHApplicationCardView.swift in Sources */,
-				B1E77B5429A5448F00C8F1AF /* NewRequestView.swift in Sources */,
+				B1E77B5429A5448F00C8F1AF /* RHNewRequestView.swift in Sources */,
 				B19CB589299C576500327184 /* RequestViewModel.swift in Sources */,
 				B11E61762996EBE400F2FFDE /* RHButtonView.swift in Sources */,
 			);

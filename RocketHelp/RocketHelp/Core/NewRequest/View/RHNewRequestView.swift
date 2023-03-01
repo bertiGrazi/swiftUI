@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct NewRequestView: View {
+struct RHNewRequestView: View {
     @State var assetNumber: String = ""
     @State var problemDescription: String = ""
+    @State var selection: Int? = nil
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -41,20 +42,30 @@ struct NewRequestView: View {
                 Spacer()
                 
                 //Buttom
-                RHButtonView(textButton: "Nova solicitação", actionButton: {})
+                NavigationLink(destination: RHMyRequestView(), tag: 1, selection: $selection) {
+                    Button(action: {
+                        self.selection = 1
+                    }) {
+                        RHButtonView(textButton: "Cadastrar") {
+                            self.selection = 1
+                        }
+                    }
+                }
             }
-            
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct NewRequestView_Previews: PreviewProvider {
     static var previews: some View {
-        NewRequestView()
+        RHNewRequestView()
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
     }
 }
 
-extension NewRequestView {
+extension RHNewRequestView {
     private var headerView: some View {
         HStack(alignment: .center, spacing: 100) {
             Button {
