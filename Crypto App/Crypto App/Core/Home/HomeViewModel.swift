@@ -22,7 +22,6 @@ class HomeViewModel: ObservableObject {
 //            self.portfolioCoins.append(DeveloperPreview.instance.coin)
             self.addSubscribers()
         }
-       
     }
     
     func addSubscribers() {
