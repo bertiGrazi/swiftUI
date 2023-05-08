@@ -28,6 +28,7 @@
 		B1D53F772A09309900FE7228 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D53F762A09309900FE7228 /* LoginViewViewModel.swift */; };
 		B1D53F792A0930A500FE7228 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D53F782A0930A500FE7228 /* RegisterViewViewModel.swift */; };
 		B1D53F7B2A0930B900FE7228 /* ToDoListItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D53F7A2A0930B900FE7228 /* ToDoListItemViewViewModel.swift */; };
+		B1D53F7D2A0935E300FE7228 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D53F7C2A0935E300FE7228 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		B1D53F762A09309900FE7228 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
 		B1D53F782A0930A500FE7228 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
 		B1D53F7A2A0930B900FE7228 /* ToDoListItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewViewModel.swift; sourceTree = "<group>"; };
+		B1D53F7C2A0935E300FE7228 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		FD71F8650289B5FC76F9047D /* Pods-ToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.release.xcconfig"; path = "Target Support Files/Pods-ToDoList/Pods-ToDoList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 				B1D53F642A092FC700FE7228 /* LoginView.swift */,
 				B1D53F662A092FD100FE7228 /* RegisterView.swift */,
 				B1D53F682A09300500FE7228 /* ToDoListView.swift */,
+				B1D53F7C2A0935E300FE7228 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1D53F652A092FC700FE7228 /* LoginView.swift in Sources */,
+				B1D53F7D2A0935E300FE7228 /* HeaderView.swift in Sources */,
 				B132D3D02A091E5F009E16DC /* MainView.swift in Sources */,
 				B1D53F792A0930A500FE7228 /* RegisterViewViewModel.swift in Sources */,
 				B1D53F6F2A09306000FE7228 /* MainViewViewModel.swift in Sources */,
