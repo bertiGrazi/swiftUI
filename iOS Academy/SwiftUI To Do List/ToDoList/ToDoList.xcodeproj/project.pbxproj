@@ -29,6 +29,7 @@
 		B1D53F792A0930A500FE7228 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D53F782A0930A500FE7228 /* RegisterViewViewModel.swift */; };
 		B1D53F7B2A0930B900FE7228 /* ToDoListItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D53F7A2A0930B900FE7228 /* ToDoListItemViewViewModel.swift */; };
 		B1D53F7D2A0935E300FE7228 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D53F7C2A0935E300FE7228 /* HeaderView.swift */; };
+		B1DD20912A1B894700D5EC58 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DD20902A1B894700D5EC58 /* TLButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		B1D53F782A0930A500FE7228 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
 		B1D53F7A2A0930B900FE7228 /* ToDoListItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewViewModel.swift; sourceTree = "<group>"; };
 		B1D53F7C2A0935E300FE7228 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		B1DD20902A1B894700D5EC58 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 		FD71F8650289B5FC76F9047D /* Pods-ToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.release.xcconfig"; path = "Target Support Files/Pods-ToDoList/Pods-ToDoList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 				B1D53F662A092FD100FE7228 /* RegisterView.swift */,
 				B1D53F682A09300500FE7228 /* ToDoListView.swift */,
 				B1D53F7C2A0935E300FE7228 /* HeaderView.swift */,
+				B1DD20902A1B894700D5EC58 /* TLButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				B1D53F6F2A09306000FE7228 /* MainViewViewModel.swift in Sources */,
 				B1D53F692A09300500FE7228 /* ToDoListView.swift in Sources */,
 				B1D53F612A092FB400FE7228 /* ToDoListItemsView.swift in Sources */,
+				B1DD20912A1B894700D5EC58 /* TLButton.swift in Sources */,
 				B1D53F712A09306D00FE7228 /* ProfileViewViewModel.swift in Sources */,
 				B1D53F672A092FD100FE7228 /* RegisterView.swift in Sources */,
 				B1D53F6B2A09302300FE7228 /* User.swift in Sources */,
