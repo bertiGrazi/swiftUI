@@ -36,6 +36,6 @@ struct ToDoListView: View {
 
 struct ToDoListView_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoListView(userId: ")
+        ToDoListView(userId: "")
     }
 }
